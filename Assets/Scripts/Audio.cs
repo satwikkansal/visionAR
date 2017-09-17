@@ -13,12 +13,12 @@ public class Audio : MonoBehaviour {
 
 	void Start ()
 	{
-		//m_TextToSpeech.Voice = VoiceType.en_US_Allison;
+//		m_TextToSpeech.Voice = VoiceType.en_US_Allison;
 		//m_TextToSpeech.Voice = VoiceType.es_ES_Enrique; 
 		//m_TextToSpeech.ToSpeech(m_TestString, HandleToSpeechCallback);
 
-		//m_TextToSpeech.Voice = VoiceType.en_US_Allison;
-		//m_TextToSpeech.ToSpeech(m_ExpressiveText, HandleToSpeechCallback);
+		m_TextToSpeech.Voice = VoiceType.en_US_Allison;
+		m_TextToSpeech.ToSpeech(m_ExpressiveText, HandleToSpeechCallback);
 
 	}
 
