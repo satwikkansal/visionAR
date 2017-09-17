@@ -431,6 +431,15 @@ public class WebCamTextureToCloudVision : MonoBehaviour {
 		curr_lang = curr;
 	}
 
+	// public void get_translated_text (string src_text, string dest_lang){
+	// 	string API_URL = "https://radiant-taiga-23109.herokuapp.com/translate?lang=" + dest_lang + "&text=" + src_text;
+	// 	WWW www = new WWW(API_URL);
+	// 	yield return www;
+
+	// 	string translated_text = www.text;
+	// 	Debug.log("Translated text is here:" + translated_text);
+	// }
+
 	public IEnumerator GoogleSearchAPI(){
 		string wordsToSearch = srcText.text;
 		Debug.Log ("Words: " + wordsToSearch);
@@ -448,6 +457,12 @@ public class WebCamTextureToCloudVision : MonoBehaviour {
 		//set default lines for the first result on google
 		if(www.error == null) {
 			destText.text = www.text;
+			string API_URL = "https://radiant-taiga-23109.herokuapp.com/translate?lang=" + "la" + "&text=" + www.text;
+			WWW www2 = new WWW(API_URL);
+			yield return www2;
+
+			string translated_text = www2.text;
+			Debug.Log("Translated text is here:" + translated_text);
 		} else {
 			string line1 = "You already know about it, don't you!?";
 			destText.text = line1;

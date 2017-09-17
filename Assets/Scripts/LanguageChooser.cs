@@ -22,7 +22,7 @@ public class LanguageChooser : MonoBehaviour {
 			ChangeLanguage(langList);
 		});
 
-		webcam.SetCurrentLanguage ("fr");
+		webcam.SetCurrentLanguage ("es");
 		translate.SetCurrentVoice (VoiceType.fr_FR_Renee);
 	}
 	
@@ -37,7 +37,6 @@ public class LanguageChooser : MonoBehaviour {
 		if (language == "French") {
 			webcam.SetCurrentLanguage ("fr");
 			translate.SetCurrentVoice (VoiceType.fr_FR_Renee);
-			// set teh french guy
 
 		} else if (language == "Spanish") {
 			webcam.SetCurrentLanguage ("es");
