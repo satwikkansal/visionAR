@@ -241,6 +241,7 @@ public class WebCamTextureToCloudVision : MonoBehaviour {
 		bannedWords.Add ("human action");
 		bannedWords.Add ("beauty");
 		bannedWords.Add ("light");
+		bannedWords.Add ("bus");
 	}
 
 	// Use this for initialization
@@ -448,13 +449,13 @@ public class WebCamTextureToCloudVision : MonoBehaviour {
 		if(www.error == null) {
 			destText.text = www.text;
 		} else {
-			string line1 = "Uh Oh!";
+			string line1 = "You already know about it, don't you!?";
 			destText.text = line1;
 		}
 
 	}
 
 	public void OpenARScene() {
-		SceneManager.LoadScene ("cameraScene");
+		SceneManager.LoadScene ("AR");
 	}
 }
