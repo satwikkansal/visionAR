@@ -24,8 +24,10 @@ public class TranslateWatson : MonoBehaviour {
 	private void OnGetTranslation(Translations translation){
 		if (translation != null && translation.translations.Length > 0) {
 			setTranslatedString (translation.translations [0].translation);
-			vision.SetTranslated(translatedText);
-			Audio.setText(translatedText, curr_voice);
+			if (translatedText.Length > 10) {
+				vision.SetTranslated (translatedText);
+				Audio.setText(translatedText, curr_voice);
+			}
 		} else {
 			translatedText = "*ERROR*";
 		}

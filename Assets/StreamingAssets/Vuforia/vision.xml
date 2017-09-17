@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Screen" size="400.000000 445.026184" />
+    <ImageTarget name="Screen2" size="500.000000 556.282715" />
     <ImageTarget name="summerst" size="720.000000 405.000000" />
     <ImageTarget name="maxresdefault" size="720.000000 405.000000" />
     <ImageTarget name="0610_mbta-bus" size="768.000000 576.000000" />

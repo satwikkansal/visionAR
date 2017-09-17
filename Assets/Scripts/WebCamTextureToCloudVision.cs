@@ -457,12 +457,12 @@ public class WebCamTextureToCloudVision : MonoBehaviour {
 		//set default lines for the first result on google
 		if(www.error == null) {
 			destText.text = www.text;
-			string API_URL = "https://radiant-taiga-23109.herokuapp.com/translate?lang=" + "la" + "&text=" + www.text;
-			WWW www2 = new WWW(API_URL);
-			yield return www2;
-
-			string translated_text = www2.text;
-			Debug.Log("Translated text is here:" + translated_text);
+//			string API_URL = "https://radiant-taiga-23109.herokuapp.com/translate?lang=" + "la" + "&text=" + www.text;
+//			WWW www2 = new WWW(API_URL);
+//			yield return www2;
+//
+//			string translated_text = www2.text;
+//			Debug.Log("Translated text is here:" + translated_text);
 		} else {
 			string line1 = "You already know about it, don't you!?";
 			destText.text = line1;

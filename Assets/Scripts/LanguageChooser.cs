@@ -22,7 +22,7 @@ public class LanguageChooser : MonoBehaviour {
 			ChangeLanguage(langList);
 		});
 
-		webcam.SetCurrentLanguage ("es");
+		webcam.SetCurrentLanguage ("en");
 		translate.SetCurrentVoice (VoiceType.fr_FR_Renee);
 	}
 	
@@ -36,15 +36,18 @@ public class LanguageChooser : MonoBehaviour {
 
 		if (language == "French") {
 			webcam.SetCurrentLanguage ("fr");
+			translate.Process (webcam.curr_lang, webcam.destText.text);
 			translate.SetCurrentVoice (VoiceType.fr_FR_Renee);
 
 		} else if (language == "Spanish") {
 			webcam.SetCurrentLanguage ("es");
+			translate.Process (webcam.curr_lang, webcam.destText.text);
 			translate.SetCurrentVoice (VoiceType.es_ES_Enrique);
 			// set the spanish guy...
 
 		} else if (language == "German") {
 			webcam.SetCurrentLanguage ("de");
+			translate.Process (webcam.curr_lang, webcam.destText.text);
 			translate.SetCurrentVoice (VoiceType.de_DE_Dieter);
 
 		} else if (language == "Italian") {
